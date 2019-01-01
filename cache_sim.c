@@ -91,7 +91,7 @@ void isHit(ADDR addr, RPL repl_policy, BOOL isRead) {
             if(hit == 0){
                 misses=misses+1;
 
-                if(isRead) return;
+//                 if(isRead) return;
 
                 int highestAge = 0;
                 int highestSpot = 0;
@@ -126,8 +126,8 @@ void isHit(ADDR addr, RPL repl_policy, BOOL isRead) {
             if(hit == 0){
                 misses=misses+1;
                 
-                if(isRead == 0)
-                    cache[under + random].tag = addr_tag;
+//              if(isRead == 0)
+                cache[under + random].tag = addr_tag;
             } 
         break;
     }
